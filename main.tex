@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper,oneside,openright]{report}
+
+\include{preambule}
+\usepackage[xindy,toc,acronym,nonumberlist]{glossaries}
+\input{glossaire}
+\makeglossaries
+
+\include{Page_de_garde/Pagedegarde}
+\author{Aurore \textsc{Perdriau}}
+\title{Identification des modifications du~programme transcriptionnel associées à des mutations des sites de fixation
+des~facteurs de transcription}
+
+\directeur{Frédéric \textsc{Chibon}}
+\encadranta{Laetitia \textsc{Bourgeade}} 
+\encadrantb{Nelly \textsc{Desplat}}
+\date{1 Mars 2016 - 31 Août 2016}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagedegarde
+
+\tableofcontents
+\thispagestyle{empty}
+\include{Remerciement}
+
+\printglossary[type=\acronymtype , title={Liste des acronymes}]
+
+\include{Introduction/introduction}
+\include{Chapitre1/chapter1}
+\include{Chapitre2/chapter2}
+\include{Chapitre3/chapter3}
+\include{Resultats/resultats}
+\include{Conclusion/conclusion}
+
+\include{Figures/Annexes}
+
+\printglossary[title={Glossaire}, toctitle={Glossaire}]
+
+\bibliographystyle{plainnat} % or try abbrvnat or unsrtnat
+\bibliography{Bibliographie/biblio} % refers to example.bib
+\addcontentsline{toc}{chapter}{Bibliographie}
+
+\end{document}

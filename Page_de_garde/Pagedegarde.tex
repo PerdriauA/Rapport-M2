@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page de garde (Pagedegarde.tex) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
+\def\@master{Mémoire de Master 2 Biologie Santé}
+\newcommand{\master}[1]{
+\def\@master{#1}}
+
+\def\@specialite{Bio-informatique}
+\newcommand{\specialite}[1]{
+\def\@specialite{#1}}
+
+\def\@directeur{directeur}
+\newcommand{\directeur}[1]{
+\def\@directeur{#1}}
+
+\def\@encadranta{}
+\newcommand{\encadranta}[1]{
+\def\@encadranta{#1}}
+
+\def\@encadrantb{}
+\newcommand{\encadrantb}[1]{
+\def\@encadrantb{#1}}
+
+\newcommand{\pagedegarde}{
+\newgeometry{top=1.5cm, bottom=1cm, left=1.5cm, right=1.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+\begin{figure}
+\minipage{0.2\textwidth}
+  \includegraphics[width=\linewidth]{Page_de_garde/bergonie.jpeg}
+\endminipage\hfill
+\minipage{0.4\textwidth}
+  \includegraphics[width=\linewidth]{Page_de_garde/inserm.png}
+\endminipage\hfill
+\minipage{0.3\textwidth}
+  \includegraphics[width=\linewidth]{Page_de_garde/Bordeaux.jpeg}
+\endminipage
+\vspace{2cm}
+\end{figure}
+
+\begin{center}
+{\Large
+{\bfseries \@master}\\
+{\Large{\bfseries Spécialité \og\@specialite\fg}}\\
+\vspace{1.5cm}}
+{\huge\bfseries \@title}\\
+\vspace{2cm}
+{\Large {\bfseries \@author}} \\
+\vspace{0.5cm}
+\@date 
+\vspace{4cm}
+
+\makebox{
+\parbox[c]{10cm}{
+\setlength{\parskip}{.5cm}
+\hspace{1.8cm}Chef d'équipe \hspace{0.5cm}: \hspace{0.5cm}{\bfseries \@directeur}
+ 
+\hspace{1.8cm}Tutrice \hspace{1.7cm}: \hspace{0.5cm}{\bfseries \@encadranta}
+
+\hspace{1.8cm}Co-tutrice \hspace{1.2cm}: \hspace{0.5cm}{\bfseries \@encadrantb}}
+}
+\end{center}
+
+\end{titlepage}
+\restoregeometry
+}
